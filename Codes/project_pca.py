@@ -70,7 +70,7 @@ svm_quad=svm_quad.fit(train_img,y_train)
 print("quad kernel score:")
 print(svm_quad.score(test_img,y_test)*100)
 
-clf = LogisticRegression(fit_intercept=False,multi_class='ovr',max_iter=500,C=1e8)
+clf = LogisticRegression(fit_intercept=False,solver='lbfgs',multi_class='ovr',max_iter=500,C=1e8)
 clf.fit(train_img,y_train)
 print("Logistic regression score:")
 print(clf.score(test_img, y_test))
